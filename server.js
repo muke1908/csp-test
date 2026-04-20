@@ -14,7 +14,7 @@ const MIME_TYPES = {
 const ALLOWED_FILES = new Set(['/near.html', '/far.html']);
 
 const server = http.createServer((req, res) => {
-  const url = req.url === '/' ? '/near.html' : req.url;
+  const url = req.url === '/' ? '/far.html' : req.url;
 
   if (!ALLOWED_FILES.has(url)) {
     res.writeHead(404, {
