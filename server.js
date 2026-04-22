@@ -5,7 +5,7 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const ancestor = process.env.ANCESTOR || '';
 
-const cspHeader = `frame-ancestors 'self'${ancestor ? ' ' + ancestor : ''}`;
+const cspHeader = `frame-ancestors ${ancestor ? ancestor : ''}`;
 
 const MIME_TYPES = {
   '.html': 'text/html',
