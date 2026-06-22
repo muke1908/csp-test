@@ -18,8 +18,8 @@ const server = http.createServer((req, res) => {
 
   if (!ALLOWED_FILES.has(url)) {
     res.writeHead(404, {
-      'Content-Type': 'text/plain',
-      'Content-Security-Policy': cspHeader,
+      'Content-Type': 'text/plain'
+      // 'Content-Security-Policy': cspHeader,
     });
     res.end('Not Found');
     return;
