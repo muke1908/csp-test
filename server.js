@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
   if (!ALLOWED_FILES.has(url)) {
     res.writeHead(404, {
       'Content-Type': 'text/plain'
-      // 'Content-Security-Policy': cspHeader,
+      'Content-Security-Policy': cspHeader,
     });
     res.end('Not Found');
     return;
@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
     if (err) {
       res.writeHead(404, {
         'Content-Type': 'text/plain',
-        // 'Content-Security-Policy': cspHeader,
+        'Content-Security-Policy': cspHeader,
       });
       res.end('Not Found');
       return;
@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(200, {
       'Content-Type': contentType,
-      // 'Content-Security-Policy': cspHeader,
+      'Content-Security-Policy': cspHeader,
     });
     res.end(data);
   });
